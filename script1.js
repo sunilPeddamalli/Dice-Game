@@ -15,7 +15,9 @@ rollDice.addEventListener('click', () => {
         currentScore += randomNum;
         document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
     } else {
-        console.log('switch');
+        document.querySelector(`#current--${activePlayer}`).textContent = 0;
+        currentScore = 0;
+        activePlayer = activePlayer === 0 ? 1 : 0;
+        document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
     }
-
 });
